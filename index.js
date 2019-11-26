@@ -18,10 +18,10 @@ app.get('/printHello', (req, res) => {
     res.json('Success! Hello~~~')
 })
 
-app.get('/users', db.getUsers)
-app.post('/users', db.createUser)
-app.put('/users/:id', db.updateUser)
-app.delete('/users/:id', db.deleteUser)
+app.get('/members', db.getUsers)
+app.post('/members', db.createUser)
+app.put('/members/:id', db.updateUser)
+app.delete('/members/:id', db.deleteUser)
 
 const port = process.env.PORT || 4000
 app.listen(port, () => {
