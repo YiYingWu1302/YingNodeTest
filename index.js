@@ -11,11 +11,7 @@ app.use(cors())
 app.use(morgan('tiny'))
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => {
-    res.json({
-        message: 'Hello!'
-    })
-})
+app.get('/', db.getUsers)
 
 app.get('/printHello', (req, res) => {
     console.log(req.body)
